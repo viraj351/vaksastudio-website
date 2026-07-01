@@ -139,6 +139,14 @@
       position: relative; z-index: 1;
       display: flex; justify-content: center; align-items: center;
     }
+    .hero-image {
+  width: 100%;
+  max-width: 480px;
+  border-radius: 4px;
+  display: block;
+  object-fit: cover;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.15);
+}
     .hero-canvas {
       width: 100%; max-width: 480px; aspect-ratio: 4/5;
       background: var(--mist);
@@ -432,6 +440,26 @@
     /* ── SCROLL REVEAL ── */
     .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
     .reveal.visible { opacity: 1; transform: none; }
+    /* About Image */
+.about-image{
+    width:100%;
+    height:100%;
+    display:block;
+    object-fit:cover;
+}
+
+/* Portfolio Images */
+.portfolio-image{
+    width:100%;
+    height:100%;
+    display:block;
+    object-fit:cover;
+    transition:transform .4s ease;
+}
+
+.portfolio-item:hover .portfolio-image{
+    transform:scale(1.05);
+}
   </style>
 </head>
 <body>
@@ -460,19 +488,8 @@
       </div>
     </div>
     <div class="hero-visual">
-      <div class="hero-canvas">
-        <div class="canvas-inner"></div>
-        <div class="canvas-glow"></div>
-        <div class="canvas-circle"></div>
-        <div class="canvas-line-h"></div>
-        <div class="canvas-line-v"></div>
-        <div class="canvas-dot" style="top:58%;left:50%;transform:translate(-50%,-50%)"></div>
-        <div class="canvas-dot" style="top:38%;left:34%;width:4px;height:4px;opacity:0.4"></div>
-        <div class="canvas-dot" style="top:38%;left:66%;width:4px;height:4px;opacity:0.4"></div>
-        <div class="canvas-tag">Original Character</div>
-        <div class="canvas-label">Vaksa Studio · 2024</div>
-      </div>
-    </div>
+    <img src="hero.png" alt="Vaksa Studio Hero" class="hero-image">
+</div>
   </section>
 
   <!-- ABOUT -->
@@ -502,9 +519,9 @@
         </div>
       </div>
       <div class="about-image-block reveal">
-        <span class="placeholder-text">Your character here</span>
-        <div class="about-accent"></div>
-      </div>
+    <img src="about.png" alt="About Vaksa Studio" class="about-image">
+    <div class="about-accent"></div>
+</div>
     </div>
   </section>
 
@@ -559,23 +576,26 @@
       <a href="#contact" class="btn-ghost">Start Your Project →</a>
     </div>
     <div class="portfolio-grid reveal">
-      <div class="portfolio-item">
-        <span class="portfolio-placeholder">Featured Character</span>
-        <div class="overlay"><span class="portfolio-item-label">The Lead — Series I</span></div>
-      </div>
-      <div class="portfolio-item">
-        <span class="portfolio-placeholder">Character II</span>
-        <div class="overlay"><span class="portfolio-item-label">Urban Identity</span></div>
-      </div>
-      <div class="portfolio-item">
-        <span class="portfolio-placeholder">Character III</span>
-        <div class="overlay"><span class="portfolio-item-label">Ethereal Series</span></div>
-      </div>
-      <div class="portfolio-item">
-        <span class="portfolio-placeholder">Character IV</span>
-        <div class="overlay"><span class="portfolio-item-label">Editorial Look</span></div>
-      </div>
-    </div>
+  <div class="portfolio-item">
+    <img src="portfolio-1.png" class="portfolio-image" alt="Portfolio 1">
+    <div class="overlay"><span class="portfolio-item-label">The Lead — Series I</span></div>
+  </div>
+
+  <div class="portfolio-item">
+    <img src="portfolio-2.png" class="portfolio-image" alt="Portfolio 2">
+    <div class="overlay"><span class="portfolio-item-label">Urban Identity</span></div>
+  </div>
+
+  <div class="portfolio-item">
+    <img src="portfolio-3.png" class="portfolio-image" alt="Portfolio 3">
+    <div class="overlay"><span class="portfolio-item-label">Ethereal Series</span></div>
+  </div>
+
+  <div class="portfolio-item">
+    <img src="portfolio-4.png" class="portfolio-image" alt="Portfolio 4">
+    <div class="overlay"><span class="portfolio-item-label">Editorial Look</span></div>
+  </div>
+</div>
   </section>
 
   <!-- CONTACT -->
